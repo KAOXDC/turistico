@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a href="{% url 'galeria_agregar' %}">agregar</a>
+
+	{% for x in lista %}
+		{{ x }}
+		<a href="{% url 'galeria_ver' pk=x.id %}">ver</a>
+		<a href="{% url 'galeria_editar' pk=x.id %}">editar</a>
+		<a href="{% url 'galeria_eliminar' pk=x.id %}">eliminar</a>
+	{% endfor %}
+</body>
+</html>
